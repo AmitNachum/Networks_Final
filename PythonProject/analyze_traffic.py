@@ -115,6 +115,7 @@ for idx, (name, file) in enumerate(pcap_files.items()):
 
     # C. TLS Header Fields - TLS Version Distribution
     if tls_versions:
+        axs[1, 0].set_title("TLS Version Distribution")
         axs[1, 0].hist(tls_versions, bins=10, alpha=0.8, label=name, color=app_color, edgecolor="black")
     else:
         axs[1, 0].set_title("TLS Version Distribution")
